@@ -1,0 +1,129 @@
+body{
+    border-top: 0;
+    margin: 0;
+    margin-top: 0;
+    padding-top: 0;
+    background-image: url(/imagen_p1/imagen_fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+h1{
+    background-color: cornflowerblue;
+    text-align: center;
+    border-top: 0;
+    border: 2px solid;
+}
+.gridmapa{
+  display: grid;
+  /*grid-template-columns: auto auto;
+  grid-gap: 10px;
+  grid-template-rows: auto auto;
+  border-color: #4741d7;
+  border: 2px solid;*/
+  grid-template-columns: (1fr, 1fr, 1fr);
+  grid-gap: 20px;
+  grid-auto-rows: minmax(100px, auto);
+}
+.grid1{
+  grid-column: 0 / 2;
+  
+}
+.grid2{
+  grid-column: 2/3;
+  /*grid-column: 3/4;
+  grid-row: 1;
+  */
+  border: 2px solid;
+  border-color: #4741d7;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  background-color: burlywood;
+  border-radius: 15px;
+}
+.grid2 p{
+  text-align: center;
+}
+.grid2 ul li{
+  text-align: left;
+}
+table{
+    background-color: whitesmoke;
+    border-radius: 15px;
+    border-color: blue;
+    border: 2px;
+    margin: auto;
+    padding: 5px;
+}
+#num1, #num2{
+    font-variant-numeric: oldstyle-nums;
+    text-align: center;
+    height: 20px;
+    font-size: 20px;
+}
+.resul{
+    background-color: rgb(130, 241, 130);
+    border: 0;
+    height: 40px;
+    width: 85%;
+    border-radius: 13px;
+    font-variant-numeric: oldstyle-nums;
+    text-align: center;
+    font-size: 30px;
+}
+.titulos2{
+    text-align: right;
+    font-family: fantasy;
+}
+.reset{
+  border-radius: 15px;
+  background-color: rgb(240, 176, 176);
+  width: 30%;
+  height: 30px;
+}
+.footer{
+  background-color: darkseagreen;
+  border-color: rgb(8, 10, 8);
+  line-height: 10px;
+  text-align: center;
+  margin-bottom: 0;
+}
+/* botón Calcular, estilos sacados de divi.com */
+.ov-btn-slide-left {
+  background: #fff; /* color de fondo */
+  color: rgb(4, 75, 206); /* color de fuente */
+  border: 2px solid #4741d7; /* tamaño y color de borde */
+  padding: 10px 40px;
+  border-radius: 3px; /* redondear bordes */
+  position:relative;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+  height: 90px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.ov-btn-slide-left:hover {
+  color: #fff; /* color de fuente hover */
+}
+.ov-btn-slide-left::after {
+  content: "";
+  background: cornflowerblue; /* color de fondo hover */
+  position: absolute;
+  z-index: -1;
+  padding: 16px 20px;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  right: 100%;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+.ov-btn-slide-left:hover::after {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="css/estilo_calcu.css">
+    <link rel="stylesheet" href="css/estilo_calcu2.css">
+     
+</head>
+<body>
+    <header>
+        <h1>CALCULADORA</h1>
+    </header>
+    <div class="gridmapa">
+        <div class="grid1">
+            <!--Uso formulario para luego poder limpiar los input con un button-->
+            <form id="formulario" action="" name="formulario" autocomplete="off">
+            <table>
+                <!--los input se podrían especificado como number pero uso text para luego mostrar la validación-->
+                <tr>
+                    <td class="titulos2">Ingrese 1° número</td>
+                    <td><input id="num1" type="text"></td>
+                    <td rowspan="2" align="center">
+                        <select name="operacion" id="operacion" class="select" required>
+                            <option value="" selected disabled>Elegir la Operación</option>
+                            <option value="1">+ Suma</option>
+                            <option value="2">- Resta</option>
+                            <option value="3">* Multiplicación</option>
+                            <option value="4">/ División</option>
+                            <option value="5">Promedio</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="titulos2">Ingrese 2° número</td>
+                    <td><input id="num2" type="text"></td>
+                    
+                </tr>
+                <br>
+                <tr>
+                    <td colspan="3" align="center">
+                        <button type="button" class="ov-btn-slide-left" id="enter" onclick="document.getElementById('resultado').innerHTML=main();">Calcular</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="titulos2">Resultado:</td>
+                    <td colspan="2"><h3 id="resultado" class="resul"></h3></td>
+                </tr>
+                <tr>
+                    <!--el button tipo reset limpia los input, agrego onclick para dejar en blanco el resultado ya que está en un H3-->
+                    <td colspan="3" align="center"><button type="reset" class="reset" onclick="document.getElementById('resultado').value='';">Limpiar</button></td>
+                </tr>
+            </table>
+            </form>
+            </center>
+        </div>
+        <div class="grid2">
+            <section>
+                <p>Bienvenidos !!!</p>
+                <p>Esta calculadora simple realiza operaciones básicas entre dos números.</p>
+                <ul>
+                    <li>Se deben ingresar dos números tanto positivos como negativos</li>
+                    <li>El menú deplegable contiene cinco operaciones (suma, resta, multiplicación, división y porcentaje)</li>
+                    <li>El segundo número, en la división, NO debe ser CERO, ya que dá <i>infinito</i></li>
+                    <li>El resultado mostrará solo dos cifras decimales</li>
+                    <li>El presione el botón "Calcular" para conocer el resultado</li>
+                    <li>El botón "Limpiar" borra lo ingresado para hacer un nuevo cálculo</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <footer>
+    <marquee  class="footer" scrolldelay="1" scrollamount="8" loop="infinite" direction="left">
+        <img src="imagen_p1/fotoperfil.jpg" height="70px" width="50px"><h4> * Desarrollado por: Agüero, Jorge Luis * Alumno del 2° tramo de Argentina Programa 4.0 * Para Famaf, UNC. 14 de agosto del 2023 *</h4>
+    </marquee>
+    </footer>
+
+    <!--cargando archivo Js con las funciones-->
+    <script src="js/calculadora.js"></script>
+</body>
+</html>
